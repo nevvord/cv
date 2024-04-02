@@ -1,0 +1,1 @@
+export { mainPageRouter } from './model'

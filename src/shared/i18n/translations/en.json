@@ -1,0 +1,53 @@
+{
+  "app": {
+    "test a": "test app"
+  },
+  "pages": {
+    "test p": "test pages"
+  },
+  "widgets": {
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "operators": "Operators",
+      "inbox": "Inbox",
+      "profiles": "Profiles",
+      "shift-work": "Shift work",
+      "need-help": "Need help?",
+      "logout": "Logout",
+      "logout-error": "Error while logging out!"
+    },
+    "questionnaires": {
+      "total-id": "Total ID: {{number}}",
+      "show-less": "Show less",
+      "show-more": "Show more",
+      "no-id-message": "Questionnaires will be here",
+      "form": {
+        "placeholder": "Enter ID here",
+        "error-already-added-id": "This questionnaire ID has already been added",
+        "error-length-id": "Questionnaire id must be exactly 8 characters"
+      }
+    }
+  },
+  "features": {
+    "auth": {
+      "auth-error": "Authorization failed, please try again later",
+      "auth-button": "Continue with Google"
+    },
+    "start-work": {
+      "start-in": "Start in:",
+      "start-work": "Start work",
+      "stop-work": "Stop work"
+    },
+    "work-history-list": {
+      "total-time": "Total time:"
+    }
+  },
+  "entities": {
+    "test e": "test e"
+  },
+  "shared": {
+    "errors": {
+      "not auth": "Sorry! You are not authorized."
+    }
+  }
+}
