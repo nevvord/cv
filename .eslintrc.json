@@ -12,7 +12,8 @@
     "plugin:react/jsx-runtime",
     "@feature-sliced/eslint-config/rules/import-order",
     "@feature-sliced/eslint-config/rules/public-api/lite",
-    "@feature-sliced/eslint-config/rules/layers-slices"
+    "@feature-sliced/eslint-config/rules/layers-slices",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -27,7 +28,12 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-refresh", "@typescript-eslint", "@stylistic"],
+  "plugins": [
+    "react",
+    "react-refresh",
+    "@typescript-eslint",
+    "@stylistic"
+  ],
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
@@ -57,7 +63,13 @@
     "no-debugger": "warn",
     "no-console": "warn",
     "curly": "warn",
-    "react/jsx-newline": ["warn", { "prevent": true, "allowMultilines": true }],
+    "react/jsx-newline": [
+      "warn",
+      {
+        "prevent": true,
+        "allowMultilines": true
+      }
+    ],
     "@stylistic/padding-line-between-statements": [
       "warn",
       {
@@ -89,7 +101,10 @@
       {
         "blankLine": "never",
         "prev": "case",
-        "next": ["default", "case"]
+        "next": [
+          "default",
+          "case"
+        ]
       }
     ],
     "@typescript-eslint/padding-line-between-statements": [
@@ -97,11 +112,17 @@
       {
         "blankLine": "always",
         "prev": "*",
-        "next": ["interface", "type"]
+        "next": [
+          "interface",
+          "type"
+        ]
       },
       {
         "blankLine": "always",
-        "prev": ["interface", "type"],
+        "prev": [
+          "interface",
+          "type"
+        ],
         "next": "*"
       }
     ],

@@ -1,9 +1,18 @@
 import { Typography } from "@mui/material";
+import { AboutMe, ForwardLinks } from "./components";
+
+
 
 export function MainPage() {
   return (
-    <Typography>
-      Main page
-    </Typography>
+    <>
+      <Typography variant="h6">
+        Vitalii Lazutchenko | Software Engineer
+      </Typography>
+
+      <ForwardLinks />
+      <AboutMe />
+
+    </>
   )
 }
