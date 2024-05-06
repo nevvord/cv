@@ -10,10 +10,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@mui/material'],
   },
-  build: {
-    sourcemap: true,
-    outDir: 'build',
-  },
   server: {
     host: true,
   },
