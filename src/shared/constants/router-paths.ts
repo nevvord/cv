@@ -1,3 +1,3 @@
 export const routerPaths = {
-  main: '/',
+  main: '/cv',
 } as const
