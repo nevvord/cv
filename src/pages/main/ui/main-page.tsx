@@ -12,8 +12,8 @@ export function MainPage() {
 
       <ForwardLinks />
       <AboutMe />
-      <ExperienceList sx={{ mt: 4 }} />
       <SkillsBlock sx={{ mt: 4 }} />
+      <ExperienceList sx={{ mt: 4 }} />
       <TYBlock sx={{ mt: 4 }} />
 
     </>

@@ -18,7 +18,21 @@ const StyledListElement = styled('div')({
 export function ForwardLinks() {
   const { isLoading, data } = useQuery({
     queryKey: [queryKeys.forwardLinks],
-    queryFn: fetchForwardLinks
+    queryFn: fetchForwardLinks,
+    initialData: [
+      {
+        "label": "email",
+        "href": "mailto:nevvord@gmail.com"
+      },
+      {
+        "label": "github",
+        "href": "https://github.com/nevvord"
+      },
+      {
+        "label": "telegram",
+        "href": "https://t.me/nevvord"
+      }
+    ]
   })
 
   if (isLoading) {
