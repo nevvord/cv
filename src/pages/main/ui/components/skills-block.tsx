@@ -8,28 +8,21 @@ interface ISkillsBlockProps {
 
 
 export function SkillsBlock({ sx }: ISkillsBlockProps) {
-  const { t } = useTranslation('pages')
+  const { t } = useTranslation('pages');
 
   return (
     <Box sx={sx}>
-      <Typography
-        sx={{ borderBottom: '1px solid' }}
-        variant="h5"
-      >
+      <Typography sx={{ borderBottom: '1px solid' }} variant="h5">
         {t('skills.title')}
-      </Typography >
+      </Typography>
 
       <Typography>
-        NodeJS,
-        TypeScript,
-        Team Management,
-        React,
-        Vue,
-        NestJs,
-        MongoDB,
-        RestAPI,
-        Lambda
+        Frontend: React, Vue.js, TypeScript, Next.js, MUI, Tanstack query, Zustand, Tailwind <br />
+        Backend: Node.js, NestJS, MongoDB, REST API, PrismaORM, PostgreSQL <br />
+        AWS: Lambda, SQS, EventBus, VPC, RDS, RDS Proxy, S3 <br />
+        DevOps: CI/CD (Bitbucket Pipelines), Deployment Automation <br />
+        Other: Team Management, WebSockets, Keycloak
       </Typography>
     </Box>
-  )
+  );
 }

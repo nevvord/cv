@@ -23,9 +23,9 @@ const experienceList: IExperienceItem[] = [
   {
     label: 'Arbipay',
     link: 'https://arbitaspay.com/',
-    description: 'During this time, I have already managed to bring a terminal project with payment systems to release from scratch. I have set up convenient management and organised efficient development processes. I gained experience and helped to set up the working environment in JIRA. I helped to implement best development practices and identify effective developers, helping them to integrate into the new result-oriented environment.',
+    description: 'Developed a payment terminal system from scratch as a Full-Stack Developer and Frontend Team Lead, building complex modules for camera-based identity verification, passport scanning, cash acceptor, and printer integration using React (frontend) and AWS (backend). Led a team of 5 developers, organized meetings, conducted training, and presented demos to investors. Streamlined development processes to accelerate delivery and ensure high-quality, user-friendly interfaces for fiat currency operations. Currently leading a full-stack team of 5 as Team Lead on a crypto banking application, utilizing React, MUI, TanStack Query for the frontend, and AWS (Lambda, SQS, EventBus, VPC, RDS, RDS Proxy, S3) for scalable backend solutions.',
     position: {
-      label: 'Full-Stack Developer/Team Lead'
+      label: 'Full-Stack Developer / Team Lead'
     },
     period: {
       from: new Date(2023, 2, 16).toDateString(),
@@ -33,21 +33,9 @@ const experienceList: IExperienceItem[] = [
     },
   },
   {
-    label: 'SAILTECH',
-    link: 'https://sailtechinc.com/',
-    description: 'Developed and maintained a robust nurse travel system, enhancing user experience and functionality.',
-    position: {
-      label: 'Full-Stack Developer'
-    },
-    period: {
-      from: new Date(2023, 10, 1).toDateString(),
-      to: new Date(2023, 11, 30).toDateString()
-    },
-  },
-  {
     label: 'Planhat',
     link: 'https://www.planhat.com/',
-    description: 'Worked for a large international company. Where I held the position of fullstack developer. I rewrote some modules from Angular to VueJS. Improved and redesigned some components and interfaces of the application.',
+    description: 'Refactored legacy Angular modules into reusable VueJS components as a Full-Stack Developer. Overcame challenges with legacy code by decomposing it into modular, performant solutions, meeting tight deadlines. Improved UI components, enhancing application efficiency and developer productivity.',
     position: {
       label: 'Full-Stack Developer'
     },
@@ -59,7 +47,7 @@ const experienceList: IExperienceItem[] = [
   {
     label: 'Arbitas',
     link: 'https://www.arbitas.com/',
-    description: 'I developed applications, mostly UI parts. I also developed the server part. Where I worked with banking systems, with real ATMs and got my first experience of working with an international team',
+    description: 'Built a frontend application from scratch for banking system integration using React, WebSockets, HTTP requests, and Keycloak for authentication. Focused on delivering a seamless UI for real-time interactions with banking APIs, collaborating with an international team.',
     position: {
       label: 'Full-Stack Developer'
     },
@@ -71,9 +59,9 @@ const experienceList: IExperienceItem[] = [
   {
     label: 'MOBIOS',
     link: 'https://mobios.school/',
-    description: 'Application development using the Vue JS/Next JS framework. Completed at least 2 applications during this time.',
+    description: 'Developed an e-commerce application using Vue.js/Next.js, later adapted as a template for other online stores. Contributed to an online ticketing service for theaters and cinemas, focusing on frontend implementation.',
     position: {
-      label: 'Front End Developer'
+      label: 'Frontend Developer'
     },
     period: {
       from: new Date(2019, 5, 22).toDateString(),
@@ -82,16 +70,27 @@ const experienceList: IExperienceItem[] = [
   },
   {
     label: 'OLZ Group',
-    description: 'Developing a notice board application, working with telephony and developing a CRM to work with customers using telephony.',
+    description: 'Co-developed a startup notice board application for rentals and services in Odessa. Worked on both frontend and backend, setting up the server infrastructure and fixing security vulnerabilities.',
+    position: {
+      label: 'Full-Stack Developer'
+    },
     period: {
       from: new Date(2018, 9, 16).toDateString(),
       to: new Date(2019, 5, 20).toDateString()
     },
+  },
+  {
+    label: 'Personal Startup: AdBot',
+    description: 'Created a bot that parses notice boards and notifies users about new listings, enabling them to respond first. Built the full solution, from development to deployment, and successfully sold it to clients, gaining hands-on sales experience.',
     position: {
-      label: 'Full-Stack developer',
+      label: 'Founder / Full-Stack Developer'
+    },
+    period: {
+      from: new Date(2020, 1, 1).toDateString(), // Укажи примерные даты, если точных нет
+      to: new Date(2020, 12, 31).toDateString()
     },
   }
-]
+];
 
 export function ExperienceList({ sx }: IExperienceListProps) {
   const { t } = useTranslation('pages')
