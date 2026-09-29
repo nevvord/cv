@@ -11,8 +11,9 @@ interface IExperienceItem {
   link?: string;
   description: string;
   period: {
-    from: string;
-    to: string | boolean;
+    from: Date;
+    // Omit `to` for the current position
+    to?: Date;
   };
   position: {
     label: string;
@@ -21,15 +22,26 @@ interface IExperienceItem {
 
 const experienceList: IExperienceItem[] = [
   {
+    label: 'Topnetics',
+    link: 'https://topnetics.com/',
+    description: 'Leading a full-stack team of 5–8 engineers at a B2B SaaS company. Designed and delivered 3 products from scratch in under a year, owning the architecture end-to-end: React/Next.js and TypeScript on the frontend, Node.js/NestJS, PostgreSQL/Prisma and AWS (SST) on the backend. Built an AI-native engineering workflow for the team: AI-ready repository context (CLAUDE.md, rules, skills), custom subagents, review skills and workflows, internal MCP servers connecting agents to company systems, AI-powered code review in CI/CD, and self-hosted local LLMs for private code, increasing delivery speed by more than 3x. Hired and mentored engineers and set team standards for AI-assisted design and development.',
+    position: {
+      label: 'Tech Lead / Team Lead'
+    },
+    period: {
+      from: new Date(2025, 10, 1),
+    },
+  },
+  {
     label: 'Arbipay',
     link: 'https://arbitaspay.com/',
-    description: 'Developed a payment terminal system from scratch as a Full-Stack Developer and Frontend Team Lead, building complex modules for camera-based identity verification, passport scanning, cash acceptor, and printer integration using React (frontend) and AWS (backend). Led a team of 5 developers, organized meetings, conducted training, and presented demos to investors. Streamlined development processes to accelerate delivery and ensure high-quality, user-friendly interfaces for fiat currency operations. Currently leading a full-stack team of 5 as Team Lead on a crypto banking application, utilizing React, MUI, TanStack Query for the frontend, and AWS (Lambda, SQS, EventBus, VPC, RDS, RDS Proxy, S3) for scalable backend solutions.',
+    description: 'Developed a payment terminal system from scratch as a Full-Stack Developer and Frontend Team Lead, building complex modules for camera-based identity verification, passport scanning, cash acceptor, and printer integration using React (frontend) and AWS (backend). Led a team of 5 developers, organized meetings, conducted training, and presented demos to investors. Later led a full-stack team of 5 as Team Lead on a crypto banking application, taking it from inception to MVP/beta with React, MUI and TanStack Query on the frontend and AWS (Lambda, SQS, EventBridge, VPC, RDS, RDS Proxy, S3) on the backend.',
     position: {
       label: 'Full-Stack Developer / Team Lead'
     },
     period: {
-      from: new Date(2023, 2, 16).toDateString(),
-      to: true
+      from: new Date(2023, 2, 16),
+      to: new Date(2025, 10, 1),
     },
   },
   {
@@ -40,8 +52,8 @@ const experienceList: IExperienceItem[] = [
       label: 'Full-Stack Developer'
     },
     period: {
-      from: new Date(2022, 10, 1).toDateString(),
-      to: new Date(2023, 2, 15).toDateString(),
+      from: new Date(2022, 10, 1),
+      to: new Date(2023, 2, 15),
     },
   },
   {
@@ -52,31 +64,8 @@ const experienceList: IExperienceItem[] = [
       label: 'Full-Stack Developer'
     },
     period: {
-      from: new Date(2019, 11, 21).toDateString(),
-      to: new Date(2022, 9, 30).toDateString()
-    },
-  },
-  {
-    label: 'MOBIOS',
-    link: 'https://mobios.school/',
-    description: 'Developed an e-commerce application using Vue.js/Next.js, later adapted as a template for other online stores. Contributed to an online ticketing service for theaters and cinemas, focusing on frontend implementation.',
-    position: {
-      label: 'Frontend Developer'
-    },
-    period: {
-      from: new Date(2019, 5, 22).toDateString(),
-      to: new Date(2019, 11, 20).toDateString()
-    },
-  },
-  {
-    label: 'OLZ Group',
-    description: 'Co-developed a startup notice board application for rentals and services in Odessa. Worked on both frontend and backend, setting up the server infrastructure and fixing security vulnerabilities.',
-    position: {
-      label: 'Full-Stack Developer'
-    },
-    period: {
-      from: new Date(2018, 9, 16).toDateString(),
-      to: new Date(2019, 5, 20).toDateString()
+      from: new Date(2019, 11, 21),
+      to: new Date(2022, 9, 30),
     },
   },
   {
@@ -86,11 +75,38 @@ const experienceList: IExperienceItem[] = [
       label: 'Founder / Full-Stack Developer'
     },
     period: {
-      from: new Date(2020, 1, 1).toDateString(), // Укажи примерные даты, если точных нет
-      to: new Date(2020, 12, 31).toDateString()
+      from: new Date(2020, 1, 1),
+      to: new Date(2020, 11, 31),
     },
-  }
+  },
+  {
+    label: 'MOBIOS',
+    link: 'https://mobios.school/',
+    description: 'Built a Vue.js/Next.js e-commerce application later reused as a template for other online stores.',
+    position: {
+      label: 'Frontend Developer'
+    },
+    period: {
+      from: new Date(2019, 5, 22),
+      to: new Date(2019, 11, 20),
+    },
+  },
+  {
+    label: 'OLZ Group',
+    description: 'Co-developed a rentals and services notice board startup across frontend and backend, including server setup and security fixes.',
+    position: {
+      label: 'Full-Stack Developer'
+    },
+    period: {
+      from: new Date(2018, 9, 16),
+      to: new Date(2019, 5, 20),
+    },
+  },
 ];
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+}
 
 export function ExperienceList({ sx }: IExperienceListProps) {
   const { t } = useTranslation('pages')
@@ -106,7 +122,7 @@ export function ExperienceList({ sx }: IExperienceListProps) {
               <ArrowRightAlt />
 
               <Typography sx={{ pl: 2 }}>
-                {element.period.from} - {typeof element.period.to === 'boolean' ? 'now' : element.period.to}
+                {formatDate(element.period.from)} – {element.period.to ? formatDate(element.period.to) : 'Present'}
               </Typography>
 
               <Typography>,</Typography>

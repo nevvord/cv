@@ -50,7 +50,7 @@ export function ForwardLinks() {
   return (
     <Stack direction='row' mt={1}>
       <Typography>
-        UTC time, Slovakia.
+        Bulgaria (EET, UTC+2) · Remote.
       </Typography>
 
 

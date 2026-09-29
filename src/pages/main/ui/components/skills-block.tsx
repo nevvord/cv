@@ -17,11 +17,14 @@ export function SkillsBlock({ sx }: ISkillsBlockProps) {
       </Typography>
 
       <Typography>
-        Frontend: React, Vue.js, TypeScript, Next.js, MUI, Tanstack query, Zustand, Tailwind <br />
-        Backend: Node.js, NestJS, MongoDB, REST API, PrismaORM, PostgreSQL <br />
-        AWS: Lambda, SQS, EventBus, VPC, RDS, RDS Proxy, S3 <br />
-        DevOps: CI/CD (Bitbucket Pipelines), Deployment Automation <br />
-        Other: Team Management, WebSockets, Keycloak
+        AI: Claude Code, Claude API, Cursor, Copilot, subagents &amp; skills, MCP servers, LLM integration, local LLMs (Ollama, vLLM, LM Studio), AI code review in CI/CD <br />
+        Frontend: React, Next.js, TypeScript, Vue.js, MUI, TanStack Query, Zustand, Tailwind <br />
+        Backend: Node.js, NestJS, PostgreSQL, Prisma ORM, MongoDB, REST API, WebSockets, Keycloak <br />
+        AWS &amp; IaC: Lambda, SQS, EventBridge, VPC, RDS, RDS Proxy, S3, SST <br />
+        DevOps: GitHub Actions, Bitbucket Pipelines, Docker, Sentry, CloudWatch <br />
+        Testing: Vitest, Jest, Playwright <br />
+        Leadership: Team Leadership, System Architecture, Hiring &amp; Mentoring <br />
+        Languages: English (B2), Russian (native), Ukrainian (native)
       </Typography>
     </Box>
   );
