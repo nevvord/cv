@@ -29,8 +29,7 @@ export function TYBlock({ sx }: ITYBlockProps) {
     <Box sx={{
       ...sx,
       '@media print': {
-        pageBreakBefore: 'always',
-        paddingTop: '50px'
+        breakInside: 'avoid'
       }
     }}>
       <Typography
@@ -77,8 +76,7 @@ export function TYBlock({ sx }: ITYBlockProps) {
 
       <Typography sx={{
         '@media print': {
-          fontSize: '0.7em',
-          lineHeight: 1
+          display: 'none'
         }
       }}>
         ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠒⠊⠉⠒⠦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
